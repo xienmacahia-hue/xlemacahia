@@ -7,25 +7,45 @@
 </head>
 <body>
   <header>
-    <a href="index.html">Home</a>
-    <a href="activities.html">Activities</a>
-    <a href="outcomes.html">Student Outcomes</a>
-    <a href="attributes.html">Graduate Attributes</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo">E-Portfolio</div>
+    <nav id="navbar">
+      <button class="toggle">☰</button>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+        <a href="outcomes.html">Student Outcomes</a>
+        <a href="attributes.html">Graduate Attributes</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <section>
-    <h1>Activities of Xienna Louise E. Macahia</h1>
-    <h2>Seminars & Conferences</h2>
-    <p>Certificates and experiences from academic events.</p>
-    <h2>Coursera Certificates</h2>
-    <p>Completed online courses and certifications.</p>
-    <h2>Extra-Curricular</h2>
-    <p>Clubs, volunteer work, and other activities.</p>
-  </section>
+  <main>
+    <section>
+      <h1>Activities</h1>
+      <div class="card">
+        <h2>Seminars & Conferences</h2>
+        <p>Certificates and experiences from academic events.</p>
+      </div>
+      <div class="card">
+        <h2>Coursera Certificates</h2>
+        <p>Completed online courses and certifications.</p>
+      </div>
+      <div class="card">
+        <h2>Extra-Curricular</h2>
+        <p>Clubs, volunteer work, and other activities.</p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     2026 E-Portfolio of Xienna Louise E. Macahia
   </footer>
+
+  <script>
+    document.querySelector(".toggle").addEventListener("click", () => {
+      document.querySelector(".links").classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
