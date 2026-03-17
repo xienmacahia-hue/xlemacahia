@@ -7,21 +7,35 @@
 </head>
 <body>
   <header>
-    <a href="index.html">Home</a>
-    <a href="activities.html">Activities</a>
-    <a href="outcomes.html">Student Outcomes</a>
-    <a href="attributes.html">Graduate Attributes</a>
-    <a href="contact.html">Contact</a>
+    <div class="logo">E-Portfolio</div>
+    <nav id="navbar">
+      <button class="toggle">☰</button>
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="activities.html">Activities</a>
+        <a href="outcomes.html">Student Outcomes</a>
+        <a href="attributes.html">Graduate Attributes</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <section>
-    <h1>Graduate Attributes of Xienna Louise E. Macahia</h1>
-    <h2>Critical Thinking</h2>
-    <h2>Communication Skills</h2>
-  </section>
+  <main>
+    <section>
+      <h1>Graduate Attributes</h1>
+      <div class="card"><h2>Critical Thinking</h2></div>
+      <div class="card"><h2>Communication Skills</h2></div>
+    </section>
+  </main>
 
   <footer>
     2026 E-Portfolio of Xienna Louise E. Macahia
   </footer>
+
+  <script>
+    document.querySelector(".toggle").addEventListener("click", () => {
+      document.querySelector(".links").classList.toggle("show");
+    });
+  </script>
 </body>
 </html>
