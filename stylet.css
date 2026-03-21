@@ -90,6 +90,19 @@ section h2 {
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
+.collapsible {
+  cursor: pointer;
+  background-color: #eee;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
