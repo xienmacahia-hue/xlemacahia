@@ -23,14 +23,44 @@
   <main>
     <section>
       <h1>Student Outcomes</h1>
-      <div class="card">
-        <h2>Outcome 1</h2>
-        <p>Aligned with graduate attributes.</p>
+
+      <div class="outcomes-container">
+
+        <!-- Outcome 1 -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Outcome 1</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Outcome 2 -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Outcome 2</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p></p>
+          </div>
+        </div>
+
+        <!-- Outcome 3 (optional future) -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Outcome 3</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p></p>
+          </div>
+        </div>
+
       </div>
-      <div class="card">
-        <h2>Outcome 2</h2>
-        <p>Aligned with graduate attributes.</p>
-      </div>
+
     </section>
   </main>
 
@@ -42,4 +72,23 @@
     document.querySelector(".toggle").addEventListener("click", () => {
       document.querySelector(".links").classList.toggle("show");
     });
-  </
+
+    const collapsibles = document.querySelectorAll(".collapsible");
+
+    collapsibles.forEach(item => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const arrow = item.querySelector(".arrow");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          arrow.style.transform = "rotate(0deg)";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
