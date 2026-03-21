@@ -101,11 +101,38 @@ section h2 {
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
+/* PROFILE CARD */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.profile-img img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ff914d;
+}
+
+/* COLLAPSIBLE */
 .collapsible {
   cursor: pointer;
   background-color: #eee;
   padding: 10px;
   border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.collapsible.active .arrow {
+  transform: rotate(180deg);
 }
 
 .content {
@@ -121,37 +148,6 @@ table {
 
 td {
   padding: 0.5rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: auto;
-}
-
-label {
-  margin-top: 0.5rem;
-}
-
-input, textarea, button {
-  margin-top: 0.3rem;
-  padding: 0.5rem;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
-
-button {
-  background: #ff914d;
-  color: white;
-  border: none;
-  cursor: pointer;
-  margin-top: 1rem;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: #e6732f;
 }
 
 footer {
@@ -179,6 +175,11 @@ footer {
 
   nav a {
     margin: 0.5rem 0;
+  }
+
+  .profile-card {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
