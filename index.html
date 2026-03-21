@@ -26,52 +26,53 @@
       <p>IT Student at Mapúa University</p>
     </section>
 
-    <!-- PROFILE WITH IMAGE -->
     <section>
       <h2>Profile</h2>
       <div class="card profile-card">
         <div class="profile-img">
-          <img src="images/me.jpg" alt="Your Photo">
+          <img src="https://via.placeholder.com/90" alt="Profile Image">
         </div>
-        <div class="profile-info">
-          <table>
-            <tr><td><strong>Full Name:</strong></td><td>Xienna Louise E. Macahia</td></tr>
-            <tr><td><strong>Email Address:</strong></td><td>xien.macahia@gmail.com</td></tr>
-            <tr><td><strong>Degree Program:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
-            <tr><td><strong>School:</strong></td><td>Mapúa University</td></tr>
-          </table>
+        <table>
+          <tr><td><strong>Full Name:</strong></td><td>Xienna Louise E. Macahia</td></tr>
+          <tr><td><strong>Email Address:</strong></td><td>xien.macahia@gmail.com</td></tr>
+          <tr><td><strong>Degree Program:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
+          <tr><td><strong>School:</strong></td><td>Mapúa University</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- Collapsible Cards -->
+    <section>
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Achievements</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+          <p>My achievements go here. You can add as much text as needed and it will expand.</p>
+        </div>
+      </div>
+
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Strengths</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+          <p>My strengths go here. Expandable content.</p>
+        </div>
+      </div>
+
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Goals</span>
+          <span class="arrow">▼</span>
+        </div>
+        <div class="content">
+          <p>My goals go here. Expandable content.</p>
         </div>
       </div>
     </section>
-
-    <!-- COLLAPSIBLE SECTIONS -->
-    <section>
-      <h2 class="collapsible">
-        Achievements <span class="arrow">▼</span>
-      </h2>
-      <div class="content">
-        <div class="card collapsible-card">My achievements.</div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="collapsible">
-        Strengths <span class="arrow">▼</span>
-      </h2>
-      <div class="content">
-        <div class="card collapsible-card">My strengths.</div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="collapsible">
-        Goals <span class="arrow">▼</span>
-      </h2>
-      <div class="content">
-        <div class="card collapsible-card">My goals.</div>
-      </div>
-    </section>
-
   </main>
 
   <footer>
@@ -79,24 +80,23 @@
   </footer>
 
   <script>
-    // navbar toggle
     document.querySelector(".toggle").addEventListener("click", () => {
       document.querySelector(".links").classList.toggle("show");
     });
 
-    // collapsible sections
     const collapsibles = document.querySelectorAll(".collapsible");
 
     collapsibles.forEach(item => {
       item.addEventListener("click", () => {
         const content = item.nextElementSibling;
-
-        item.classList.toggle("active"); // arrow rotation
+        const arrow = item.querySelector(".arrow");
 
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
+          arrow.style.transform = "rotate(0deg)";
         } else {
           content.style.maxHeight = content.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
         }
       });
     });
