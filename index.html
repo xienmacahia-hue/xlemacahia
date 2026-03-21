@@ -26,44 +26,55 @@
       <p>IT Student at Mapúa University</p>
     </section>
 
+    <!-- PROFILE WITH IMAGE -->
     <section>
       <h2>Profile</h2>
-      <div class="card">
-        <table>
-          <tr><td><strong>Full Name:</strong></td><td>Xienna Louise E. Macahia</td></tr>
-          <tr><td><strong>Email Address:</strong></td><td>xien.macahia@gmail.com</td></tr>
-          <tr><td><strong>Degree Program:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
-          <tr><td><strong>School:</strong></td><td>Mapúa University</td></tr>
-        </table>
+      <div class="card profile-card">
+        
+        <div class="profile-img">
+          <img src="images/me.jpg" alt="My Photo">
+        </div>
+
+        <div class="profile-info">
+          <table>
+            <tr><td><strong>Full Name:</strong></td><td>Xienna Louise E. Macahia</td></tr>
+            <tr><td><strong>Email Address:</strong></td><td>xien.macahia@gmail.com</td></tr>
+            <tr><td><strong>Degree Program:</strong></td><td>Bachelor of Science in Information Technology</td></tr>
+            <tr><td><strong>School:</strong></td><td>Mapúa University</td></tr>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COLLAPSIBLE SECTIONS -->
+    <section>
+      <h2 class="collapsible">
+        Achievements <span class="arrow">▼</span>
+      </h2>
+      <div class="content">
+        <div class="card">My achievements.</div>
       </div>
     </section>
 
     <section>
-  <h2 class="collapsible">Achievements</h2>
-  <div class="content">
-    <div class="card">
-      My achievements.
-    </div>
-  </div>
-</section>
+      <h2 class="collapsible">
+        Strengths <span class="arrow">▼</span>
+      </h2>
+      <div class="content">
+        <div class="card">My strengths.</div>
+      </div>
+    </section>
 
-<section>
-  <h2 class="collapsible">Strengths</h2>
-  <div class="content">
-    <div class="card">
-      My strengths.
-    </div>
-  </div>
-</section>
+    <section>
+      <h2 class="collapsible">
+        Goals <span class="arrow">▼</span>
+      </h2>
+      <div class="content">
+        <div class="card">My goals.</div>
+      </div>
+    </section>
 
-<section>
-  <h2 class="collapsible">Goals</h2>
-  <div class="content">
-    <div class="card">
-      My goals.
-    </div>
-  </div>
-</section>
   </main>
 
   <footer>
@@ -71,23 +82,25 @@
   </footer>
 
   <script>
-  document.querySelector(".toggle").addEventListener("click", () => {
-    document.querySelector(".links").classList.toggle("show");
-  });
-
-  const collapsibles = document.querySelectorAll(".collapsible");
-
-  collapsibles.forEach(item => {
-    item.addEventListener("click", () => {
-      const content = item.nextElementSibling;
-
-      if (content.style.maxHeight) {
-        content.style.maxHeight = null;
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-      }
+    document.querySelector(".toggle").addEventListener("click", () => {
+      document.querySelector(".links").classList.toggle("show");
     });
-  });
-</script>
+
+    const collapsibles = document.querySelectorAll(".collapsible");
+
+    collapsibles.forEach(item => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+
+        item.classList.toggle("active");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
