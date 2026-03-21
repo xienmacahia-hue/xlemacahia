@@ -21,36 +21,59 @@
   </header>
 
   <main>
-  <section class="hero">
-    <h1>Activities</h1>
-    <p>Explore my academic and extra-curricular activities</p>
-  </section>
+    <!-- Hero Banner -->
+    <section class="hero">
+      <h1>Activities</h1>
+      <p>Explore my academic and extra-curricular activities</p>
+    </section>
 
-  <section class="activities-grid">
-    <div class="card">
-      <h2>Seminars & Conferences</h2>
-      <p></p> <!-- leave blank for now -->
-    </div>
-    <div class="card">
-      <h2>Coursera Certificates</h2>
-      <p></p>
-    </div>
-    <div class="card">
-      <h2>Extra-Curricular</h2>
-      <p></p>
-    </div>
-  </section>
-</main>
+    <!-- Activities Cards -->
+    <section class="activities-grid">
+
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Seminars & Conferences</span>
+          <span class="arrow">V</span>
+        </div>
+        <div class="content">
+          <p></p> <!-- Add details here later -->
+        </div>
+      </div>
+
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Coursera Certificates</span>
+          <span class="arrow">V</span>
+        </div>
+        <div class="content">
+          <p></p>
+        </div>
+      </div>
+
+      <div class="collapsible-card">
+        <div class="collapsible">
+          <span>Extra-Curricular</span>
+          <span class="arrow">V</span>
+        </div>
+        <div class="content">
+          <p></p>
+        </div>
+      </div>
+
+    </section>
+  </main>
 
   <footer>
     2026 E-Portfolio of Xienna Louise E. Macahia
   </footer>
 
   <script>
+    // Navbar toggle
     document.querySelector(".toggle").addEventListener("click", () => {
       document.querySelector(".links").classList.toggle("show");
     });
 
+    // Collapsible cards
     const collapsibles = document.querySelectorAll(".collapsible");
 
     collapsibles.forEach(item => {
