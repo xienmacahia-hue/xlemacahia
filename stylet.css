@@ -88,7 +88,7 @@ section h2 {
 
 /* Base card style for all cards */
 .card {
-  background: white;             /* WHITE background for all cards */
+  background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   margin: 1rem 0;
@@ -102,7 +102,7 @@ section h2 {
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
 }
 
-/* PROFILE CARD */
+/* Profile card */
 .profile-card {
   display: flex;
   flex-direction: column;
@@ -122,39 +122,43 @@ section h2 {
   border: none;
 }
 
-/* COLLAPSIBLE SECTIONS */
-.collapsible {
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: transparent;   /* header stays transparent */
-  font-weight: bold;
-}
-
-.arrow {
-  transition: transform 0.3s ease;
-}
-
-.collapsible.active .arrow {
-  transform: rotate(180deg);
-}
-
-.content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
-}
-
-/* Collapsible card inside content (matches base card) */
+/* Collapsible cards */
 .collapsible-card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  margin: 0.5rem 0;
-  padding: 1rem;
+  margin: 1rem 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Collapsible header */
+.collapsible {
+  cursor: pointer;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  background: white;
+  user-select: none;
+}
+
+/* Arrow rotation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+/* Collapsible content */
+.content {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.content p {
+  margin: 1rem 0;
 }
 
 /* Table styling */
