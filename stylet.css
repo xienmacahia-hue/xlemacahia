@@ -88,7 +88,7 @@ section h2 {
 
 .card {
   background: white;
-  border-radius: 8px;
+  border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   margin: 1rem 0;
   padding: 1rem;
@@ -104,16 +104,21 @@ section h2 {
 /* PROFILE CARD */
 .profile-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 20px;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+  gap: 1rem;
 }
 
 .profile-img img {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid #ff914d;
+  border-radius: 12px;
+  border: none;
 }
 
 /* COLLAPSIBLE */
