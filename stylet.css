@@ -144,6 +144,11 @@ section h2 {
   user-select: none;
 }
 
+/* Collapsible header title color */
+.collapsible span:first-child {
+  color: #e6732f; /* Orange title for Achievements, Strengths, Goals, etc. */
+}
+
 /* Arrow rotation */
 .arrow {
   transition: transform 0.3s ease;
@@ -155,6 +160,7 @@ section h2 {
   overflow: hidden;
   padding: 0 20px;
   transition: max-height 0.3s ease, padding 0.3s ease;
+  color: #333; /* Black text for content */
 }
 
 .content p, .content ul {
