@@ -71,9 +71,23 @@
   </footer>
 
   <script>
-    document.querySelector(".toggle").addEventListener("click", () => {
-      document.querySelector(".links").classList.toggle("show");
+  document.querySelector(".toggle").addEventListener("click", () => {
+    document.querySelector(".links").classList.toggle("show");
+  });
+
+  const collapsibles = document.querySelectorAll(".collapsible");
+
+  collapsibles.forEach(item => {
+    item.addEventListener("click", () => {
+      const content = item.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
     });
-  </script>
+  });
+</script>
 </body>
 </html>
