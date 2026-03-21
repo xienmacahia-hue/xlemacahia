@@ -157,8 +157,12 @@ section h2 {
   transition: max-height 0.3s ease, padding 0.3s ease;
 }
 
-.content p {
+.content p, .content ul {
   margin: 1rem 0;
+}
+
+.content ul {
+  padding-left: 1.2rem;
 }
 
 /* Table styling */
@@ -190,11 +194,19 @@ td {
   transform: scale(1.1);
 }
 
+/* Footer */
 footer {
   background: #ff914d;
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+/* Activities page grid layout */
+.activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
 }
 
 /* Responsive */
