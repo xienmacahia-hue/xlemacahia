@@ -209,6 +209,13 @@ footer {
   gap: 1rem;
 }
 
+/* Student Outcomes container */
+.outcomes-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav .toggle {
