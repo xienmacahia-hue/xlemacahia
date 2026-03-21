@@ -23,17 +23,58 @@
   <main>
     <section>
       <h1>Activities</h1>
-      <div class="card">
-        <h2>Seminars & Conferences</h2>
-        <p>Certificates and experiences from academic events.</p>
-      </div>
-      <div class="card">
-        <h2>Coursera Certificates</h2>
-        <p>Completed online courses and certifications.</p>
-      </div>
-      <div class="card">
-        <h2>Extra-Curricular</h2>
-        <p>Clubs, volunteer work, and other activities.</p>
+
+      <!-- Grid container for cards -->
+      <div class="activities-grid">
+
+        <!-- Seminars & Conferences -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Seminars & Conferences</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p>Certificates and experiences from academic events, workshops, and professional seminars.</p>
+            <ul>
+              <li>Tech Seminar 2025 – Mapúa University</li>
+              <li>AI Conference Online 2024</li>
+              <li>Cybersecurity Workshop 2024</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Coursera Certificates -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Coursera Certificates</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p>Completed online courses and certifications to improve IT skills.</p>
+            <ul>
+              <li>Introduction to Python Programming</li>
+              <li>Web Development Basics</li>
+              <li>Data Science Fundamentals</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Extra-Curricular -->
+        <div class="collapsible-card">
+          <div class="collapsible">
+            <span>Extra-Curricular</span>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="content">
+            <p>Clubs, volunteer work, and other activities outside of academics.</p>
+            <ul>
+              <li>IT Club – Member</li>
+              <li>Volunteer, Community Clean-Up Drive 2025</li>
+              <li>Robotics Team 2024</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
@@ -45,6 +86,23 @@
   <script>
     document.querySelector(".toggle").addEventListener("click", () => {
       document.querySelector(".links").classList.toggle("show");
+    });
+
+    const collapsibles = document.querySelectorAll(".collapsible");
+
+    collapsibles.forEach(item => {
+      item.addEventListener("click", () => {
+        const content = item.nextElementSibling;
+        const arrow = item.querySelector(".arrow");
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          arrow.style.transform = "rotate(0deg)";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          arrow.style.transform = "rotate(180deg)";
+        }
+      });
     });
   </script>
 </body>
