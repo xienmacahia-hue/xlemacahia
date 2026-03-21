@@ -31,10 +31,12 @@
       <h2>Profile</h2>
       <div class="card profile-card">
         
+        <!-- Profile image on top -->
         <div class="profile-img">
-          <img src="images/me.jpg" alt="My Photo">
+          <img src="images/me.jpg" alt="Your Photo">
         </div>
 
+        <!-- Info below image -->
         <div class="profile-info">
           <table>
             <tr><td><strong>Full Name:</strong></td><td>Xienna Louise E. Macahia</td></tr>
@@ -82,17 +84,19 @@
   </footer>
 
   <script>
+    // navbar toggle
     document.querySelector(".toggle").addEventListener("click", () => {
       document.querySelector(".links").classList.toggle("show");
     });
 
+    // collapsible sections
     const collapsibles = document.querySelectorAll(".collapsible");
 
     collapsibles.forEach(item => {
       item.addEventListener("click", () => {
         const content = item.nextElementSibling;
 
-        item.classList.toggle("active");
+        item.classList.toggle("active"); // arrow rotation
 
         if (content.style.maxHeight) {
           content.style.maxHeight = null;
