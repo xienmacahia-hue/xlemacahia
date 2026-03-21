@@ -114,8 +114,8 @@ section h2 {
 }
 
 .profile-img img {
-  width: 120px;
-  height: 120px;
+  width: 90px;
+  height: 90px;
   object-fit: cover;
   border-radius: 12px;
   border: none;
@@ -124,12 +124,13 @@ section h2 {
 /* COLLAPSIBLE */
 .collapsible {
   cursor: pointer;
-  background-color: #eee;
   padding: 10px;
   border-radius: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: transparent; /* remove gray background */
+  font-weight: bold;
 }
 
 .arrow {
@@ -146,6 +147,15 @@ section h2 {
   transition: max-height 0.3s ease;
 }
 
+.collapsible-card {
+  background: white;          /* match profile card */
+  border-radius: 12px;        /* rounded corners */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* subtle shadow */
+  margin: 0.5rem 0;           /* spacing between sections */
+  padding: 1rem;
+}
+
+/* Table styling */
 table {
   width: 100%;
   border-collapse: collapse;
