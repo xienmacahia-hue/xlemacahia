@@ -61,22 +61,27 @@ nav a:hover {
   color: #ffe0c2; 
 }
 
+/* Hero banner for all pages */
 .hero {
   text-align: center;
   padding: 3rem 1rem;
-  background: linear-gradient(135deg, #ff914d, #ffb366);
+  background: linear-gradient(135deg, #ff914d, #ffb366); /* Orange gradient */
   color: white;
+  border-radius: 12px; /* optional rounded edges */
+  margin-bottom: 2rem;
   animation: fadeIn 1s ease-in;
 }
 
 .hero h1 {
   font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .hero p {
   font-size: 1.2rem;
 }
 
+/* Section styling */
 section {
   padding: 2rem;
 }
@@ -130,7 +135,7 @@ section h2 {
   margin: 1rem 0;
   overflow: hidden;
   transition: all 0.3s ease;
-  animation: fadeInUp 0.6s ease; /* Added animation for Activities/Outcomes pages */
+  animation: fadeInUp 0.6s ease; /* animation for activities/outcomes */
 }
 
 /* Collapsible header */
@@ -147,7 +152,7 @@ section h2 {
 
 /* Collapsible header title color */
 .collapsible span:first-child {
-  color: #e6732f; /* Orange title for Achievements, Strengths, Goals, etc. */
+  color: #e6732f; /* Orange for titles */
 }
 
 /* Arrow rotation */
@@ -162,7 +167,7 @@ section h2 {
   padding: 0 20px;
   transition: max-height 0.3s ease, padding 0.3s ease;
   color: #333;
-  animation: fadeInUp 0.6s ease; /* Added animation for expanding content */
+  animation: fadeInUp 0.6s ease; /* animate content on expand */
 }
 
 .content p, .content ul {
